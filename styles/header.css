@@ -107,3 +107,76 @@ header a:hover{
     order: 1;  El icono de favoritos aparecerá primero 
 }
 */
+
+/* Media Query para pantallas pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+    /* Ajustar el contenedor principal del header */
+    .header {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box; /* Asegura que el padding no desborde */
+        overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    }
+
+    .header-adv {
+        background: var(--color-negro);
+        color: var(--color-gris50);
+        padding: var(--gap-sm);
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    header nav {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; /* Asegura que el padding no desborde */
+    }
+
+    /* Centrar el logo */
+    .nav-container {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+        gap: 10px; /* Espacio entre los elementos */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ajustar la lista de navegación */
+    .header-nav-list {
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        gap: 5px; /* Reduce el espacio entre los enlaces */
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: center; /* Centra los enlaces */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ajustar los enlaces dentro del nav */
+    header a {
+        font-size: 14px; /* Reduce el tamaño de fuente */
+        padding: 10px; /* Agrega espacio interno */
+        text-align: center; /* Centra el texto */
+        width: 100%; /* Ocupa todo el ancho */
+        box-sizing: border-box; /* Asegura que el padding no desborde */
+    }
+
+    /* Ocultar la barra de búsqueda */
+    .search-container {
+        display: none; /* Oculta la barra de búsqueda */
+    }
+
+    /* Ajustar el ícono de favoritos */
+    .header-fav {
+        justify-content: center; /* Centra el ícono */
+        width: 100%; /* Ocupa todo el ancho */
+        box-sizing: border-box;
+    }
+}
