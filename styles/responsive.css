@@ -1,0 +1,76 @@
+/* RESPONSIVE DESIGN */
+
+/* 📱 Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    body {
+        font-size: 14px;
+    }
+
+    /* Header */
+    .header {
+        flex-direction: column; /* Hace que los elementos del header se acomoden en columna */
+        text-align: center;
+    }
+
+    /* Menú de navegación */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hero section */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .menu-categorias {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero .slider {
+        width: 100%;
+    }
+
+    /* Sección de productos */
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr; /* Un solo producto por fila */
+        gap: 10px;
+    }
+
+    /* Flash Sales */
+    .flash-sales {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 🖥️ Para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr); /* Dos productos por fila */
+    }
+}
+
+/* 🖥️ Para pantallas grandes (PCs) */
+@media (min-width: 1025px) {
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .productos {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro productos por fila */
+    }
+}

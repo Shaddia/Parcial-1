@@ -1,0 +1,100 @@
+/* ----- BARRA SUPERIOR DE ANUNCIO ----- */
+.header-adv {
+    background: var(--color-negro);
+    color: var(--color-gris50);
+    padding: var(--gap-sm);
+    text-align: center;
+}
+
+/* ----- CONTENEDOR PRINCIPAL DEL HEADER ----- */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: var(--gap-md);
+    background-color: var(--color-panel);
+}
+
+/* Contenedor de los elementos del nav */
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Estilos de la lista de navegación */
+.header-nav-list {
+    display: flex;
+    gap: var(--gap-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces dentro del nav */
+header a {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+/* Estilo para la opción seleccionada */
+.seleccionado {
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-negro);
+}
+
+/* ----- CONTENEDOR PARA BÚSQUEDA Y FAVORITOS ----- */
+.search-fav-container {
+    display: flex; /* Alinea los elementos en una fila */
+    align-items: center; /* Centra verticalmente */
+    gap: var(--gap-md); /* Espacio entre la barra de búsqueda y favoritos */
+}
+
+/* ----- BARRA DE BÚSQUEDA ----- */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    order: 1; /* Barra de búsqueda antes del icono de favoritos (por defecto) */
+}
+
+/* Input de búsqueda */
+.search-container input {
+    width: 220px; /* Ajustado para mayor similitud con la referencia */
+    padding: 10px 40px 10px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gris30);
+    outline: none;
+    background-color: var(--color-gris10);
+    font-size: 14px;
+}
+
+/* Ícono de búsqueda */
+.search-container .search-icon {
+    position: absolute;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    color: var(--color-gris50);
+    cursor: pointer;
+}
+
+/* ----- ÍCONO DE FAVORITOS ----- */
+.header-fav {
+    display: flex;
+    align-items: center;
+    order: 2; /* Icono de favoritos después de la barra de búsqueda (por defecto) */
+}
+
+/* Opción alternativa: INTERCAMBIAR POSICIÓN (actívala si el profe lo pide) */
+/* Para cambiar el orden, comenta las líneas anteriores de "order" y activa estas: */
+/*
+.search-container {
+    order: 2;  La barra de búsqueda se moverá después del icono de favoritos
+}
+
+.header-fav {
+    order: 1;  El icono de favoritos aparecerá primero 
+}
+*/

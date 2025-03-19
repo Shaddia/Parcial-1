@@ -1,0 +1,241 @@
+/* ----- HERO SECTION ----- */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px; /* Espacio entre la lista de categorías y el hero */
+    min-height: 450px; /* Ajusta esto para mantener la altura adecuada */
+}
+
+/* Flash Sales debe ir después del Hero y antes de los productos */
+.flash-sales {
+    order: -1; /* Mueve Flash Sales debajo del Hero */
+}
+
+.products {
+    order: 1; /* Asegura que los productos estén después de Flash Sales */
+}
+
+/* ----- LISTA DE CATEGORÍAS ----- */
+.categories {
+    width: 250px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para poder mover con left */
+    left: -70px; /* Mueve más a la izquierda */
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.categories li:hover {
+    background: #f5f5f5;
+}
+
+.categories span {
+    font-size: 18px;
+}
+
+/* ----- SLIDER ----- */
+.hero-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajusta este valor según la altura deseada */
+    object-fit: cover; /* Asegura que la imagen cubra bien sin deformarse */
+    border-radius: 10px;
+}
+
+
+/* ----- TEXTO SOBRE IMAGEN ----- */
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-text a {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-text a:hover {
+    background: #444;
+}
+
+/* ----- INDICADORES DEL SLIDER ----- */
+.indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #000;
+}
+
+/* ----- OPCIÓN PARA INTERCAMBIAR POSICIONES ----- */
+/* Si el profesor quiere que el slider esté primero y luego las categorías,
+   descomenta la siguiente línea: */
+
+/*
+.hero {
+    flex-direction: row-reverse;
+}
+*/
+
+/* Sección de productos */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+/* Cada producto dentro de la sección */
+.product {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro de cada producto */
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* SOLO aplica descuentos dentro de los productos */
+.product .discount {
+    position: absolute;
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    top: 10px;
+    left: 10px;
+}
+
+/* Bloquea cualquier descuento en el header o elementos fuera de los productos */
+header .discount,
+.header-logo .discount,
+.header-adv .discount,
+nav .discount {
+    display: none !important;
+}
+
+/* Botón "Comprar" */
+.Comprar {
+    display: none;
+    background-color: #808000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.product:hover .Comprar {
+    display: block;
+}
+
+/* Estilos del botón de favoritos */
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.favorite-btn.favorito-activo {
+    background-color: red;
+    color: white;
+}
+
+
+/* Cambiando el orden de los productos */
+/*.product:nth-child(1) { order: 3; } /* Mueve el Gamepad al final */
+/*.product:nth-child(2) { order: 1; } /* Mueve el Teclado al principio */
+/*.product:nth-child(3) { order: 4; } /* Mueve el Monitor al último */
+/*.product:nth-child(4) { order: 2; } /* Mueve la Silla a la segunda posición */
+
+

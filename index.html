@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Sección de anuncio -->
+        <section class="header-adv">
+            <p>¡Ofertas en tecnologías pagando con tarjeta de crédito solo hoy! - <b>OFF 50%</b></p>
+        </section>
+
+        <!-- Contenedor de navegación -->
+        <nav>
+            <div class="nav-container">
+                <h1 class="header-logo">LOGO</h1>
+
+                <ul class="header-nav-list">
+                    <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                    <li><a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Registro</a></li>
+                </ul>
+
+                <!-- Nuevo contenedor para barra de búsqueda y favoritos -->
+                <div class="search-fav-container">
+                    <!-- Barra de búsqueda -->
+                    <div class="search-container">
+                        <input type="text" placeholder="¿Qué estás buscando?">
+                        <img src="assets/lupa.png" alt="Buscar" class="search-icon">
+                    </div>
+
+                    <!-- Botón de favoritos -->
+                    <a href="#" class="header-fav" id="ver-favoritos">
+                        <img src="assets/favoritospicture.png" alt="Favoritos">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <section id="inicio">
+            <section class="hero">
+                <div class="categories">
+                    <ul>
+                        <li>Tecnología <span>›</span></li>
+                        <li>Damas</li>
+                        <li>Caballeros</li>
+                        <li>Infantes</li>
+                        <li>Hogar</li>
+                        <li>Deportes</li>
+                        <li>Mascotas </li>
+                    </ul>
+                </div>
+
+                <!-- Slider -->
+                <div class="hero-slider">
+                    <div class="slide">
+                        <img src="assets/xiaomihero.png" alt="Xiaomi 14 Ultra">
+                        <div class="hero-text">
+                            <h2>Xiaomi 14 Ultra</h2>
+                            <p>¡Hasta 10% de descuento!</p>
+                            <a href="#">Comprar ahora→</a>
+                        </div>
+                    </div>
+                    <div class="indicators">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contenedor para Flash Sales y Productos -->
+            <!-- 🔥 SECCIÓN FLASH SALES -->
+            <section id="flash-sales" class="flash-sales">
+                <h2>Venta relámpago</h2>
+                <div class="countdown">
+                    <span>Días <strong>03</strong></span>
+                    <span>Horas <strong>23</strong></span>
+                    <span>Minutos <strong>19</strong></span>
+                    <span>Segundos <strong>56</strong></span>
+                </div>
+
+                <!--Para cambiar el orden, agregar la clase "orden-personalizado" -->
+                <!-- Activando orden personalizado 1 
+    <div class="flash-sales-container orden-1">-->
+                <!-- Activando orden personalizado 2 
+    <div class="flash-sales-container orden-2">-->
+                <!-- Activando orden personalizado 3 
+    <div class="flash-sales-container orden-3">-->
+
+                <div class="flash-sales-container">
+                    <div class="flash-item item-1">
+                        <span class="discount">-40%</span>
+                        <img src="assets/nitro.png" alt="Producto 1">
+                        <p class="price">$120 <span class="old-price">$160</span></p>
+                        <button class="buy-button">Comprar Ahora</button>
+                    </div>
+
+                    <div class="flash-item item-2">
+                        <span class="discount">-30%</span>
+                        <img src="assets/sansumg.png" alt="Producto 2">
+                        <p class="price">$140 <span class="old-price">$200</span></p>
+                        <button class="buy-button">Comprar Ahora</button>
+                    </div>
+
+                    <div class="flash-item item-3">
+                        <span class="discount">-50%</span>
+                        <img src="assets/lenovo.png" alt="Producto 3">
+                        <p class="price">$100 <span class="old-price">$200</span></p>
+                        <button class="buy-button">Comprar Ahora</button>
+                    </div>
+
+                    <div class="flash-item item-4">
+                        <span class="discount">-20%</span>
+                        <img src="assets/sansumg.png" alt="Producto 4">
+                        <p class="price">$160 <span class="old-price">$200</span></p>
+                        <button class="buy-button">Comprar Ahora</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="products">
+                <!--Agrego los atributos data-id, data-name, data-price, 
+                    data-image a cada producto para que JavaScript pueda recuperar 
+                    los datos de cada producto al hacer clic en el botón de favoritos.-->
+                <div class="product" data-id="1" data-name="HAVIT HV-G92 Gamepad" data-price="$120.000"
+                    data-image="assets/palanca.png">
+
+                    <span class="discount">-40%</span>
+                    <img src="assets/palanca.png" alt="Gamepad">
+                    <h3>HAVIT HV-G92 Gamepad</h3>
+                    <p class="price">$120.000 <span class="old-price">$160.000</span></p>
+                    <p class="rating">⭐⭐⭐⭐⭐ (88)</p>
+                    <button class="Comprar">Comprar</button>
+                    <button class="favorite-btn">♡</button>
+                </div>
+
+                <div class="product" data-id="2" data-name="AK-900 Wired Keyboard" data-price="$260.000"
+                    data-image="assets/teclado.png">
+                    <span class="discount">-35%</span>
+                    <img src="assets/teclado.png" alt="Keyboard">
+                    <h3>AK-900 Wired Keyboard</h3>
+                    <p class="price">$260.000 <span class="old-price">$460.000</span></p>
+                    <p class="rating">⭐⭐⭐⭐⭐ (75)</p>
+                    <button class="Comprar">Comprar</button>
+                    <button class="favorite-btn">♡</button>
+                </div>
+
+                <div class="product" data-id="3" data-name="IPS LCD Gaming Monitor" data-price="$4.050.000"
+                    data-image="assets/monitor.png">
+                    <span class="discount">-60%</span>
+                    <img src="assets/monitor.png" alt="Monitor">
+                    <h3>IPS LCD Gaming Monitor</h3>
+                    <p class="price">$4.050.000 <span class="old-price">$9.050.000</span></p>
+                    <p class="rating">⭐⭐⭐⭐⭐ (99)</p>
+                    <button class="Comprar">Comprar</button>
+                    <button class="favorite-btn">♡</button>
+                </div>
+
+                <div class="product" data-id="4" data-name="S-Series Comfort Chair" data-price="$875.000"
+                    data-image="assets/silla.png">
+                    <span class="discount">-25%</span>
+                    <img src="assets/silla.png" alt="Chair">
+                    <h3>S-Series Comfort Chair</h3>
+                    <p class="price">$875.000 <span class="old-price">$1.750.000</span></p>
+                    <p class="rating">⭐⭐⭐⭐⭐ (99)</p>
+                    <button class="Comprar">Comprar</button>
+                    <button class="favorite-btn">♡</button>
+                </div>
+            </div>
+        </section>
+        <section id="nosotros">
+
+            <div class="imagen-nosotros">
+                <div class="nosotros-texto">
+                    <h1>Nuestra Historia</h1>
+                    <p>Fundada en 2015, nuestra empresa es un referente en el comercio electrónico.
+                        Con el apoyo de estrategias de marketing, datos y soluciones innovadoras,
+                        contamos con más de 10,500 vendedores y 300 marcas, sirviendo a millones
+                        de clientes en la región.</p>
+                    <p>
+                        Ofrecemos más de 1 millón de productos, creciendo rápidamente y
+                        diversificando nuestra oferta para satisfacer a nuestros consumidores.
+                    </p>
+
+                </div>
+                <img src="assets/nosotrosimagen.png" alt="Nuestra historia">
+            </div>
+        </section>
+
+        <!-- <button class="view-all">View All Products</button>
+         Sección para mostrar los productos favoritos 
+        <h2>Mis Favoritos</h2>-->
+        <div id="favoritos-container"></div>
+    </main>
+
+
+    <script>
+        function mostrarSeccion(seccion) {
+            document.getElementById('inicio').style.display = (seccion === 'inicio') ? 'block' : 'none';
+            document.getElementById('nosotros').style.display = (seccion === 'nosotros') ? 'block' : 'none';
+        }
+    </script>
+
+    <footer class="footer order-1"> <!-- Cambia "order-1" por otro para mover elementos -->
+        <div class="footer-container">
+            <div class="footer-item">
+                <div class="footer-icon">
+                    <img src="assets/entrega.png" alt="Delivery">
+                </div>
+                <h3>ENTREGA GRATUITA Y RÁPIDA</h3>
+                <p>Entrega gratuita para todos los pedidos superiores a $450.000</p>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-icon">
+                    <img src="assets/customerservice.png" alt="Customer Service">
+                </div>
+                <h3>SERVICIO AL CLIENTE LAS 24 HORAS</h3>
+                <p>Soporte al cliente amigable y eficaz</p>
+            </div>
+
+            <div class="footer-item">
+                <div class="footer-icon">
+                    <img src="assets/reembolso.png" alt="Money Back">
+                </div>
+                <h3>GARANTÍA DE REEMBOLSO</h3>
+                <p>Devolvemos su dinero si no le gustó el producto a los 30 días</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Enlace al script de favoritos -->
+    <script src="favoritos.js"></script>
+
+</body>
+
+</html>
