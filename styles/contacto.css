@@ -1,0 +1,80 @@
+#contacto {
+    display: none; /* Ocultar la sección Contacto por defecto */
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 35%;
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: #008000;
+}
+
+.contact-info hr {
+    margin: 10px 0;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #008000;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #008000;
+}
+
+/* ====== OPCIÓN PARA INTERCAMBIAR POSICIONES ====== */
+/*
+Si quieres intercambiar la posición del bloque de información con el formulario, 
+solo cambia 'row' por 'row-reverse' en la siguiente propiedad de .contact-container:
+*/
+
+.contact-container {
+    display: flex;
+    flex-direction: row; /* Cambiar a 'row-reverse' para intercambiar */
+}

@@ -275,10 +275,6 @@ main {
 .footer.order-3 .footer-item:nth-child(3) { order: 2; }
 .footer.order-3 .footer-item:nth-child(1) { order: 3; } */
 
-#nosotros {
-    display: none;
-}
-
 #nosotros:target {
     display: block;
 }
@@ -402,6 +398,7 @@ main {
     max-width: 80%;
     margin: auto;
     padding: 20px;
+    display: none;
 }
 
 #nosotros h1, 
@@ -414,7 +411,7 @@ main {
 }
 
 #nosotros h1{
-    font-size:40px;
+    font-size:35px;
 }
 
 .imagen-nosotros {
