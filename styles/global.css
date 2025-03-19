@@ -89,6 +89,7 @@ main {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 12px;
 }
 
 /* Mostrar botón cuando se pase el mouse por el producto */
@@ -402,6 +403,7 @@ main {
     max-width: 80%;
     margin: auto;
     padding: 20px;
+    display: none;
 }
 
 #nosotros h1, 
