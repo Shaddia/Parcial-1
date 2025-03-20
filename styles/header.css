@@ -4,6 +4,27 @@
     color: var(--color-gris50);
     padding: var(--gap-sm);
     text-align: center;
+    position: relative; /* Necesario para que el botón absoluto se posicione dentro de este contenedor */
+}
+
+/* Botón de Dark Mode en la barra negra */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--color-gris50);
+    transition: color 0.3s ease;
+    margin-left: 10px; /* Separa el botón de favoritos */
+    order: 3; /* Asegura que el botón esté después de favoritos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cambiar el color del ícono en modo oscuro */
+body.dark-mode #dark-mode-toggle {
+    color: #ffffff; /* Cambia el color del ícono en modo oscuro */
 }
 
 /* ----- CONTENEDOR PRINCIPAL DEL HEADER ----- */
@@ -30,6 +51,7 @@ header nav {
     list-style: none;
     margin: 0;
     padding: 0;
+    
 }
 
 /* Enlaces dentro del nav */
@@ -45,6 +67,27 @@ header a:hover{
     border-radius: 10px;
     padding: 5px;
 }
+
+.header-nav-list {
+    display: flex;
+}
+
+#nav-inicio {
+    order: 4; 
+}
+
+#nav-nosotros {
+    order: 1;
+}
+
+#nav-contacto {
+    order: 2;
+}
+
+#nav-registro {
+    order: 3;
+}
+
 
 /* Estilo para la opción seleccionada */
 .seleccionado {
@@ -82,7 +125,7 @@ header a:hover{
 /* Ícono de búsqueda */
 .search-container .search-icon {
     position: absolute;
-    right: 15px;
+    right: 45px;
     width: 16px;
     height: 16px;
     color: var(--color-gris50);
@@ -93,6 +136,7 @@ header a:hover{
 .header-fav {
     display: flex;
     align-items: center;
+    justify-content: center;
     order: 2; /* Icono de favoritos después de la barra de búsqueda (por defecto) */
 }
 

@@ -20,6 +20,31 @@
         align-items: center;
     }
 
+    /* Contenedor de búsqueda y favoritos */
+    .search-fav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Distribuye los elementos */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 10px;
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    /* Botón de Dark Mode */
+    #dark-mode-toggle {
+        background: none;
+        border: none;
+        font-size: 18px; /* Ajusta el tamaño del ícono */
+        cursor: pointer;
+        color: var(--color-negro); /* Cambia según el tema */
+        transition: color 0.3s ease;
+    }
+
+    /* Cambiar el color del ícono en modo oscuro */
+    body.dark-mode #dark-mode-toggle {
+        color: #ffffff; /* Cambia el color del ícono en modo oscuro */
+    }
+
     /* Hero section */
     .hero {
         flex-direction: column;
@@ -60,6 +85,12 @@
     .productos {
         grid-template-columns: repeat(2, 1fr); /* Dos productos por fila */
     }
+
+    /* Contenedor de búsqueda y favoritos */
+    .search-fav-container {
+        justify-content: flex-end; /* Alinea los elementos al final */
+        gap: 15px;
+    }
 }
 
 /* 🖥️ Para pantallas grandes (PCs) */
@@ -72,5 +103,11 @@
 
     .productos {
         grid-template-columns: repeat(4, 1fr); /* Cuatro productos por fila */
+    }
+
+    /* Contenedor de búsqueda y favoritos */
+    .search-fav-container {
+        justify-content: flex-end; /* Alinea los elementos al final */
+        gap: 15px;
     }
 }

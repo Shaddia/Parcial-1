@@ -428,3 +428,42 @@ main {
 .nosotros-texto {
     align-items: center;
 }
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode nav {
+    background-color: #222;
+}
+
+.dark-mode .hero-slider,
+.dark-mode .flash-sales-container,
+.dark-mode .products {
+    background-color: #1a1a1a;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* Estilos para el botón de Dark Mode */
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}

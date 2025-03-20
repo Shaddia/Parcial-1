@@ -9,6 +9,7 @@
     min-height: 450px; /* Ajusta esto para mantener la altura adecuada */
 }
 
+
 /* Flash Sales debe ir después del Hero y antes de los productos */
 .flash-sales {
     order: -1; /* Mueve Flash Sales debajo del Hero */
@@ -238,4 +239,32 @@ nav .discount {
 /*.product:nth-child(3) { order: 4; } /* Mueve el Monitor al último */
 /*.product:nth-child(4) { order: 2; } /* Mueve la Silla a la segunda posición */
 
+/* Media Query para pantallas pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+    /* Ajustar la lista de categorías */
+    .categories {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        left: 0; /* Centra la lista */
+        padding: 10px; /* Ajusta el padding */
+        box-shadow: none; /* Opcional: elimina la sombra para simplificar el diseño */
+        text-align: center;
+        align-items: center;
+    }
+
+    .categories ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .categories li {
+        padding: 10px; /* Reduce el padding */
+        font-size: 14px; /* Reduce el tamaño de fuente */
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .categories li span {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+    }
+}
 

@@ -1,0 +1,125 @@
+/* Modo claro (por defecto) */
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000 !important; /* Letras negras */
+}
+
+/* Ajusta los textos en modo oscuro */
+.dark-mode {
+    background-color: #121212 !important; /* Fondo oscuro */
+    color: #ffffff !important; /* Letras blancas */
+}
+
+/* Ajusta TODOS los textos dentro de dark mode */
+.dark-mode * {
+    color: #ffffff !important;
+}
+
+/* 🔹 FIJAR BOTÓN EN LA BARRA DE NAVEGACIÓN */
+.dark-mode-toggle {
+    position: fixed;  /* Fija el botón en la pantalla */
+    top: 10px;        /* Ajusta la posición desde arriba */
+    right: 20px;      /* Lo alinea a la derecha */
+    z-index: 9999;    /* Asegura que esté por encima de otros elementos */
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Cambiar el color del botón al pasar el mouse */
+.dark-mode-toggle:hover {
+    background-color: #666666;
+}
+
+
+/* Asegura que los textos de la sección de contacto sean blancos en modo oscuro */
+.dark-mode .contact-section,
+.dark-mode .contact-section h2,
+.dark-mode .contact-section p {
+    color: #ffffff !important;
+}
+
+/* Estilos para inputs en modo oscuro */
+.dark-mode input,
+.dark-mode textarea {
+    color: #ffffff !important;
+    background-color: #222222 !important;
+    border: 1px solid #444444 !important;
+}
+
+/* Corregir el menú de navegación */
+.dark-mode nav a {
+    color: black;
+}
+
+.dark-mode categories{
+    color: black;
+}
+
+/* Placeholders en modo oscuro */
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #bbbbbb !important;
+}
+
+/* Estilos para botones */
+.dark-mode button {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+.dark-mode button:hover {
+    background-color: #666666 !important;
+}
+
+/* Ajustar las letras de la lista de categorías en modo oscuro */
+.dark-mode .categories {
+    color: #000000 !important; /* Letras negras */
+    background-color: #ffffff !important; /* Fondo blanco */
+}
+
+/* Ajustar las letras de los elementos dentro de la lista de categorías */
+.dark-mode .categories li {
+    color: #000000 !important; /* Letras negras */
+}
+
+/* Ajustar las letras de la sección de contacto en contenedores blancos */
+.dark-mode .contact-section {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: #000000 !important; /* Letras negras */
+}
+
+.dark-mode .contact-section h2,
+.dark-mode .contact-section p {
+    color: #000000 !important; /* Letras negras */
+}
+
+/* Asegurar que las letras en "Call To Us" y "Write To Us" sean negras en modo oscuro */
+.dark-mode .contact-info {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: #000000 !important; /* Letras negras */
+}
+
+.dark-mode .contact-info h2,
+.dark-mode .contact-info h3,
+.dark-mode .contact-info p,
+.dark-mode .contact-info a,
+.dark-mode .contact-info span,
+.dark-mode .contact-info p strong {
+    color: #000000 !important; /* Letras negras */
+}
+
+/* Asegurar que los enlaces sean negros y visibles */
+.dark-mode .contact-info a {
+    text-decoration: none; /* Opcional: elimina el subrayado */
+    color: #000000 !important; /* Letras negras */
+}
+
+.dark-mode .contact-info a:hover {
+    color: #444444 !important; /* Cambia a un gris oscuro al pasar el mouse */
+}

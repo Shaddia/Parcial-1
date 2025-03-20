@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>XTECH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="./styles/registro.css">
+    <link rel="stylesheet" href="./styles/darkmode.css">
 
 </head>
 
@@ -25,40 +26,66 @@
     <header>
         <!-- Sección de anuncio -->
         <section class="header-adv">
+
             <p>
                 ¡Ofertas en tecnologías pagando con tarjeta de crédito solo hoy! -
                 <b>OFF 50%</b>
             </p>
-        </section>
 
+        </section>
         <!-- Contenedor de navegación -->
         <nav>
             <div class="nav-container">
-                <h1 class="header-logo">LOGO</h1>
+                <h1 class="header-logo" style="font-family: 'Poppins', sans-serif; font-size: 40px; font-weight:100px">XTECH</h1>
+
 
                 <ul class="header-nav-list">
-                    <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
-                    <li><a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a></li>
-                    <li><a href="#" onclick="mostrarSeccion('contacto')">Contacto</a></li>
-                    <li>
-                        <a href="#" onclick="mostrarSeccion('registro')">Registro</a>
-                    </li>
+                    <li id="nav-nosotros"><a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a></li>
+                    <li id="nav-contacto"><a href="#" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+                    <li id="nav-registro"><a href="#" onclick="mostrarSeccion('registro')">Registro</a></li>
+                    <li id="nav-inicio"><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
                 </ul>
-
+                
+                
                 <!-- Nuevo contenedor para barra de búsqueda y favoritos -->
                 <div class="search-fav-container">
                     <!-- Barra de búsqueda -->
                     <div class="search-container">
                         <input type="text" placeholder="¿Qué estás buscando?" />
                         <img src="assets/lupa.png" alt="Buscar" class="search-icon" />
-                    </div>
 
-                    <!-- Botón de favoritos -->
-                    <a href="#" class="header-fav" id="ver-favoritos">
-                        <img src="assets/favoritospicture.png" alt="Favoritos" />
-                    </a>
+
+                        <!-- Botón de favoritos -->
+                        <a href="#" class="header-fav" id="ver-favoritos">
+                            <img src="assets/favoritospicture.png" alt="Favoritos" />
+                        </a>
+            <button id="dark-mode-toggle">☾</button>
+                        
+                    </div>
                 </div>
             </div>
+            <script>
+                const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+                // Verifica si el usuario ya activó el modo oscuro antes
+                if (localStorage.getItem("dark-mode") === "enabled") {
+                    document.body.classList.add("dark-mode");
+                    darkModeToggle.textContent = "☼"; // Cambia el icono
+                }
+
+                darkModeToggle.addEventListener("click", () => {
+                    document.body.classList.toggle("dark-mode");
+
+                    // Guarda la preferencia del usuario
+                    if (document.body.classList.contains("dark-mode")) {
+                        localStorage.setItem("dark-mode", "enabled");
+                        darkModeToggle.textContent = "☼";
+                    } else {
+                        localStorage.setItem("dark-mode", "disabled");
+                        darkModeToggle.textContent = "☾";
+                    }
+                });
+            </script>
         </nav>
     </header>
 
@@ -67,7 +94,7 @@
             <section class="hero">
                 <div class="categories">
                     <ul>
-                        <li>Tecnología <span>›</span></li>
+                        <li>Tecnología <span></span></li>
                         <li>Damas</li>
                         <li>Caballeros</li>
                         <li>Infantes</li>
@@ -378,6 +405,10 @@
     <!-- Enlace al script de favoritos -->
     <script src="favoritos.js"></script>
     <script src="./scripts/main.js"></script>
+
+
+
+
 </body>
 
 </html>

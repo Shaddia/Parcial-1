@@ -91,3 +91,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("modoOscuroToggle"); // Asegúrate de que el botón tiene este ID
+    const body = document.body;
+
+    // Verifica si el usuario tenía activado el modo oscuro antes
+    if (localStorage.getItem("modoOscuro") === "activado") {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode"); // Asegura que inicie en modo claro
+    }
+
+    // Evento para cambiar entre modos
+    toggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+
+        // Guarda el estado en localStorage
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("modoOscuro", "activado");
+        } else {
+            localStorage.setItem("modoOscuro", "desactivado");
+        }
+    });
+});
+
+
